@@ -8,7 +8,15 @@
     --line: #30302e;
     --accent: #d8d3c8;
     --font: "DM Sans", sans-serif;
-    --display: "Manrope", sans-serif
+    --display: "Manrope", sans-serif;
+
+    /* Identidad visual ESSENTIAL */
+    --letter-spacing-display: -0.055em;
+    --letter-spacing-label: 0.14em;
+
+    /* Transiciones */
+    --transition-fast: 200ms ease;
+    --transition-smooth: 350ms ease;
 }
 
 * {
@@ -93,11 +101,31 @@ button {
     transition: color .2s
 }
 
-.main-nav a:hover,
-.header-cta:hover {
-    color: white
+.main-nav a {
+    position: relative;
 }
 
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-smooth);
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.main-nav a:hover {
+    color: var(--text);
+}
 .header-actions {
     display: flex;
     align-items: center;
@@ -107,11 +135,21 @@ button {
 .language-switch {
     border: 0;
     background: transparent;
-    color: #c4c2bc;
+    color: var(--muted);
     font-size: 10px;
-    letter-spacing: .1em;
+    letter-spacing: .12em;
     cursor: pointer;
-    padding: 8px
+    padding: 8px;
+    transition: color var(--transition-fast);
+}
+
+.language-switch:hover {
+    color: var(--text);
+}
+
+.language-switch:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 4px;
 }
 
 .header-cta {
@@ -120,7 +158,17 @@ button {
     align-items: center;
     border: 1px solid #555;
     padding: 12px 15px;
-    color: #f4f2ed
+    color: var(--text);
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.header-cta:hover {
+    color: var(--bg);
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 .menu-toggle {
@@ -1132,4 +1180,36 @@ button {
     .dialog-bottom {
         padding-top: 20px
     }
+}
+
+/* =================================
+   ESSENTIAL — TYPOGRAPHIC SYSTEM
+================================= */
+
+/* Titulares principales */
+.hero h1,
+.section-heading h2,
+.manifesto h2 {
+    letter-spacing: var(--letter-spacing-display);
+}
+
+/* Etiquetas y textos técnicos */
+.eyebrow,
+.announcement,
+.product-category,
+.footer-label,
+.result-count {
+    letter-spacing: var(--letter-spacing-label);
+}
+
+/* Identidad del logotipo */
+.wordmark {
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    transition: opacity var(--transition-fast);
+}
+
+.wordmark:hover {
+    opacity: 0.75;
 }
