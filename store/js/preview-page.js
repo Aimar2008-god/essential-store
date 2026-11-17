@@ -59,6 +59,21 @@ if (!previewProduct) {
 
     const product = previewProduct;
     document.title = `${product.name} — ${copy.previewLabel} | ESSENTIAL`;
+    const pageUrl = new URL("preview.html", window.location.href);
+    pageUrl.searchParams.set("product", product.id);
+    pageUrl.searchParams.set("lang", previewLanguage);
+    const englishUrl = new URL(pageUrl);
+    englishUrl.searchParams.set("lang", "en");
+    const spanishUrl = new URL(pageUrl);
+    spanishUrl.searchParams.set("lang", "es");
+    document.querySelector('link[rel="canonical"]').href = pageUrl.href;
+    document.querySelector('link[rel="alternate"][hreflang="en"]').href = englishUrl.href;
+    document.querySelector('link[rel="alternate"][hreflang="es"]').href = spanishUrl.href;
+    document.querySelector('meta[property="og:title"]').content = document.title;
+    document.querySelector('meta[property="og:description"]').content = product.description[previewLanguage];
+    document.querySelector('meta[property="og:url"]').content = pageUrl.href;
+    document.querySelector('meta[property="og:image"]').content = new URL(product.screenshots[0].src, window.location.href).href;
+    document.querySelector('meta[name="description"]').content = product.description[previewLanguage];
     document.querySelector("#productType").textContent = copy.type;
     document.querySelector("#productTag").textContent = product.tag[previewLanguage];
     document.querySelector("#productTitle").textContent = product.name;

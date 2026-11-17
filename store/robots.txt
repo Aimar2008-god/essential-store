@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aimar2008-god.github.io/essential-store/sitemap.xml

@@ -30,6 +30,8 @@ jobs:
           cp store/index.html _site/index.html
           cp store/preview.html _site/preview.html
           cp store/image-credits.md _site/image-credits.md
+          cp store/robots.txt _site/robots.txt
+          cp store/sitemap.xml _site/sitemap.xml
           cp -R store/css/. _site/css/
           cp -R store/js/. _site/js/
           cp -R store/assets/. _site/assets/

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/</loc>
+  </url>
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/preview.html?product=skin&amp;lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimar2008-god.github.io/essential-store/preview.html?product=skin&amp;lang=en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimar2008-god.github.io/essential-store/preview.html?product=skin&amp;lang=es" />
+  </url>
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/preview.html?product=table&amp;lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimar2008-god.github.io/essential-store/preview.html?product=table&amp;lang=en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimar2008-god.github.io/essential-store/preview.html?product=table&amp;lang=es" />
+  </url>
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/preview.html?product=form&amp;lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimar2008-god.github.io/essential-store/preview.html?product=form&amp;lang=en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimar2008-god.github.io/essential-store/preview.html?product=form&amp;lang=es" />
+  </url>
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/preview.html?product=motion&amp;lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimar2008-god.github.io/essential-store/preview.html?product=motion&amp;lang=en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimar2008-god.github.io/essential-store/preview.html?product=motion&amp;lang=es" />
+  </url>
+  <url>
+    <loc>https://aimar2008-god.github.io/essential-store/preview.html?product=still&amp;lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimar2008-god.github.io/essential-store/preview.html?product=still&amp;lang=en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimar2008-god.github.io/essential-store/preview.html?product=still&amp;lang=es" />
+  </url>
+</urlset>
