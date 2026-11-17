@@ -602,52 +602,74 @@ button {
     background: linear-gradient(145deg, #8c8a7e, #41463e)
 }
 
-.visual-restaurant {
-    background: #39342f
+
+/* =================================
+   ESSENTIAL — PRODUCT IDENTITIES
+================================= */
+
+/* GLOW HOUSE — Skincare and beauty */
+.visual-skin {
+    background: #d8d7cc;
 }
 
-.visual-restaurant .mock-window {
-    background: #e2d6c4
+.visual-skin .mock-window {
+    background: #f4f2eb;
 }
 
-.visual-restaurant .mock-shape {
-    background: linear-gradient(145deg, #a77b4e, #37291f)
+.visual-skin .mock-shape {
+    background: linear-gradient(145deg, #b8c0af, #65705f);
 }
 
-.visual-barber {
-    background: #292929
+/* TABLE NO. 01 — Restaurant */
+.visual-table {
+    background: #39342f;
 }
 
-.visual-barber .mock-window {
-    background: #d2c8b8
+.visual-table .mock-window {
+    background: #e2d6c4;
 }
 
-.visual-barber .mock-shape {
-    background: linear-gradient(145deg, #282522, #806b51)
+.visual-table .mock-shape {
+    background: linear-gradient(145deg, #bd9568, #493326);
 }
 
-.visual-portfolio {
-    background: #333a37
+/* FORM STUDIO — Business */
+.visual-form {
+    background: #292d32;
 }
 
-.visual-portfolio .mock-window {
-    background: #d7d9d1
+.visual-form .mock-window {
+    background: #d9dce0;
 }
 
-.visual-portfolio .mock-shape {
-    background: linear-gradient(145deg, #7d8b7c, #343d38)
+.visual-form .mock-shape {
+    background: linear-gradient(145deg, #8293a1, #354451);
 }
 
-.visual-fitness {
-    background: #30382f
+/* MOTION CLUB — Fitness */
+.visual-motion {
+    background: #30382f;
 }
 
-.visual-fitness .mock-window {
-    background: #d9ddce
+.visual-motion .mock-window {
+    background: #d9ddce;
 }
 
-.visual-fitness .mock-shape {
-    background: linear-gradient(145deg, #b5c66e, #4c5a39)
+.visual-motion .mock-shape {
+    background: linear-gradient(145deg, #b5c66e, #4c5a39);
+}
+
+/* STILL HOUSE — Boutique Stays */
+.visual-still {
+    background: #34302d;
+}
+
+.visual-still .mock-window {
+    background: #e1d8ca;
+}
+
+.visual-still .mock-shape {
+    background: linear-gradient(145deg, #b5a58c, #625849);
 }
 
 .visual-stay {
@@ -869,23 +891,9 @@ button {
     overflow: hidden
 }
 
-.dialog-preview:before {
-    content: "";
-    position: absolute;
-    inset: 40px 20px 0;
-    background: #d6d1c5;
-    box-shadow: 0 10px 40px #0006
-}
 
-.dialog-preview:after {
-    content: "";
-    position: absolute;
-    width: 45%;
-    height: 45%;
-    right: 15%;
-    bottom: 0;
-    background: linear-gradient(130deg, #9b9a87, #4b5147)
-}
+
+
 
 .dialog-info {
     padding: 55px 30px 25px;
@@ -963,7 +971,7 @@ button {
     .hero {
         padding: 75px 5% 25px;
         grid-template-columns: 1fr;
-        gap: 35px
+        gap: 24px
     }
 
     .hero-copy {
@@ -1213,3 +1221,152 @@ button {
 .wordmark:hover {
     opacity: 0.75;
 }
+
+/* =================================
+   ESSENTIAL — TABLE NO. 01 PREVIEW
+================================= */
+
+.restaurant-preview {
+    position: absolute;
+    inset: 40px 20px 0;
+    padding: 22px 7%;
+    overflow: hidden;
+    background: #e2d6c4;
+    color: #29251f;
+    font-family: var(--font);
+}
+
+.restaurant-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #29251f33;
+    padding-bottom: 13px;
+}
+
+.restaurant-nav strong {
+    font-family: var(--display);
+    font-size: 15px;
+    letter-spacing: -.06em;
+}
+
+.restaurant-nav span {
+    font-size: 7px;
+    letter-spacing: .08em;
+}
+
+.restaurant-hero {
+    position: relative;
+    z-index: 1;
+    padding-top: 35px;
+}
+
+.restaurant-hero > span:first-child {
+    font-size: 7px;
+    letter-spacing: .13em;
+}
+
+
+.restaurant-hero h2 {
+    max-width: 390px;
+    margin: 12px 0;
+    font-family: var(--display);
+    font-size: clamp(30px, 3.5vw, 42px);
+    font-weight: 500;
+    line-height: .96;
+    letter-spacing: -.075em;
+}
+
+
+.restaurant-hero p {
+    max-width: 220px;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.restaurant-button {
+    display: inline-block;
+    margin-top: 13px;
+    padding: 10px 13px;
+    background: #29251f;
+    color: #e2d6c4;
+    font-size: 7px;
+    letter-spacing: .1em;
+}
+
+.restaurant-bottom {
+    position: absolute;
+    right: 7%;
+    bottom: 17px;
+    left: 7%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid #29251f33;
+    padding-top: 10px;
+    font-size: 6px;
+    letter-spacing: .08em;
+}
+
+/* Storefront product photography and direct template previews */
+.skip-link { position: absolute; top: .5rem; left: .5rem; z-index: 50; transform: translateY(-160%); padding: .7rem 1rem; background: #eeeae2; color: #171717; }
+.skip-link:focus { transform: translateY(0); }
+.hero-art { height: 440px; }
+.hero-photo { position: absolute; inset: 34px 6% 20px 0; display: flex; align-items: end; padding: 18px; background: linear-gradient(180deg, transparent 55%, #171713b8), url("https://commons.wikimedia.org/wiki/Special:FilePath/Rules_restaurant_interior.jpg?width=1600") center/cover no-repeat; }
+.hero-photo span { color: #fff; font-size: 8px; letter-spacing: .14em; }
+.hero-stamp { position: absolute; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; padding: 14px 16px; background: #eeeae2; color: #171717; font-size: 8px; letter-spacing: .12em; box-shadow: 0 12px 35px #0006; }
+.hero-stamp b { color: #77766f; font-weight: 500; }
+.intro-strip { grid-template-columns: 1fr 2fr 1fr; }
+.intro-statement { font-size: clamp(26px, 3.2vw, 43px); }
+.product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.product-card { min-width: 0; }
+.product-visual { height: 350px; display: block; background: #292824; }
+.product-visual img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
+.product-card:hover .product-visual img { transform: scale(1.025); }
+.product-tag { background: #111d; color: #f3f1ec; }
+.product-details { display: block; }
+.product-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+.product-name { margin: 0; }
+.product-category { margin: 6px 0 0; }
+.product-price { margin: 0; white-space: nowrap; }
+.product-description { max-width: 440px; margin: 1rem 0; color: #92918d; font-size: 11px; line-height: 1.7; }
+.product-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.preview-action, .buy-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: .75rem .9rem; font-size: 9px; }
+.preview-action { border: 1px solid #555; }
+.buy-action { background: #eeeae2; color: #171717; }
+.preview-action:hover { border-color: #eeeae2; }
+.buy-action:hover { background: #d8d3c8; }
+.checkout-note { margin: 2.2rem 0 0; color: #8d8c86; font-size: 10px; }
+.product-card a:focus-visible { outline: 2px solid #eeeae2; outline-offset: 4px; }
+@media(max-width:800px) { .hero-art { height: 390px; } .product-visual { height: 300px; } }
+@media(max-width:560px) { .hero-art { height: 330px; } .product-grid { grid-template-columns: 1fr; } .product-visual { height: 330px; } .intro-strip { display: block; } .intro-statement { margin: 30px 0; font-size: 32px; } .product-actions { flex-direction: column; align-items: stretch; } .preview-action, .buy-action { width: 100%; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+.store-language-control{display:flex;align-items:center;gap:.15rem}.store-language-control button{border:0;background:transparent;color:var(--muted);padding:.35rem .4rem;font-size:9px;letter-spacing:.1em;cursor:pointer}.store-language-control button[aria-pressed="true"]{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.35rem}.store-language-control button:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
+
+/* Product cards show a visual preview of each site's first screen, not a stock-photo tile. */
+.product-visual{position:relative;overflow:hidden;background:#d7d3c9}
+.product-visual .site-preview--card{height:100%;border:0;box-shadow:none;transition:transform .45s}
+.product-card:hover .site-preview--card{transform:scale(1.02)}
+.product-visual .preview-browser{height:19px;padding:0 9px}
+.product-visual .preview-browser-dots{gap:3px}
+.product-visual .preview-browser-dots i{width:4px;height:4px}
+.product-visual .preview-browser-url{font-size:6px}
+.product-visual .preview-page{height:calc(100% - 19px)}
+.product-visual .preview-site-nav{height:15%;padding:0 6%}
+.product-visual .preview-site-brand{font-size:clamp(8px,1vw,13px)}
+.product-visual .preview-site-nav nav{gap:clamp(7px,1.2vw,17px);font-size:clamp(5px,.58vw,8px)}
+.product-visual .preview-site-hero{height:73%;grid-template-columns:1fr .82fr;padding:4% 6%}
+.product-visual .preview-site-copy h3{font-size:clamp(24px,3vw,44px)}
+.product-visual .preview-site-eyebrow{font-size:clamp(5px,.58vw,8px)}
+.product-visual .preview-site-subline{font-size:clamp(6px,.68vw,9px)}
+.product-visual .preview-site-button{font-size:clamp(5px,.58vw,8px)}
+.product-visual .preview-site-photo{height:88%;min-height:0}
+.product-visual .preview-site-caption{height:12%;align-items:center}
+.question-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid #4c4c47;padding:.75rem .85rem;color:var(--text);font-size:9px;text-align:center}
+.question-action:hover{border-color:var(--accent);color:var(--accent)}
+.buy-action.is-disabled{background:#444;color:#a4a39c;cursor:not-allowed}
+.checkout-note{max-width:680px;line-height:1.7}
+.product-visual:focus-visible,.question-action:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(max-width:1000px){.product-actions{gap:.45rem}.preview-action,.buy-action,.question-action{flex:1;gap:.5rem;padding:.7rem .6rem;font-size:8px}}
+@media(max-width:560px){.product-visual .preview-site-copy h3{font-size:clamp(34px,9vw,48px)}.product-visual .preview-site-eyebrow{font-size:7px}.product-visual .preview-site-subline{font-size:9px}.product-visual .preview-site-button{font-size:8px}.product-visual .preview-site-nav{height:14%}.product-visual .preview-site-hero{height:74%}.product-actions{flex-direction:column;align-items:stretch}.preview-action,.buy-action,.question-action{width:100%}}

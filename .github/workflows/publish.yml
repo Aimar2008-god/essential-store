@@ -1,0 +1,47 @@
+name: Publish ESSENTIAL storefront
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Prepare public storefront files
+        run: |
+          mkdir -p _site/css _site/js _site/assets
+          cp store/index.html _site/index.html
+          cp store/preview.html _site/preview.html
+          cp store/image-credits.md _site/image-credits.md
+          cp -R store/css/. _site/css/
+          cp -R store/js/. _site/js/
+          cp -R store/assets/. _site/assets/
+
+      - name: Set up GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload storefront artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy storefront
+        id: deployment
+        uses: actions/deploy-pages@v4

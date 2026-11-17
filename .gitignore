@@ -1,0 +1,5 @@
+# Paid product source stays on this computer and in the payment provider's private delivery area.
+/templates/
+/Nueva carpeta/
+/delivery-packages/*.zip
+/delivery-packages/**/*.zip

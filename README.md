@@ -1,28 +1,33 @@
-# ESSENTIAL — Storefront starter
+# ESSENTIAL — Website template collection
 
-Primera versión frontend de la tienda ESSENTIAL, construida con HTML, CSS y JavaScript vanilla.
+ESSENTIAL is a bilingual storefront for five responsive website templates. The public site uses plain HTML, CSS and JavaScript and needs no package install or build step.
 
-## Cómo ejecutarla
-1. Descomprime el ZIP.
-2. Abre `index.html` en tu navegador.
-3. Recomendado: utiliza la extensión **Live Server** de Visual Studio Code para servir el proyecto localmente.
+## Open locally
 
-## Funcionalidades incluidas
-- Diseño responsive para escritorio, tablet y móvil.
-- Selector de idioma inglés/español con preferencia guardada en `localStorage`.
-- Catálogo generado desde `js/products.js`.
-- Filtros por categoría.
-- Ventana de detalle de producto.
-- Menú móvil.
-- Sin frameworks ni dependencias JavaScript externas.
+Open `index.html` at the project root, or open `store/index.html` directly. Each product card opens a preview page with the supplied screenshots for that template.
 
-## Importante
-Esta versión es una demo frontend. No procesa pagos, no crea cuentas ni entrega archivos comprados. Antes de vender habrá que integrar un proveedor de pagos, entrega digital segura, licencias, políticas legales y correo de soporte.
+| Template | Preview | Price |
+| --- | --- | ---: |
+| Glow House | `store/preview.html?product=skin` | €39 |
+| Table No. 01 | `store/preview.html?product=table` | €49 |
+| Form Studio | `store/preview.html?product=form` | €39 |
+| Motion Club | `store/preview.html?product=motion` | €45 |
+| Still House | `store/preview.html?product=still` | €49 |
 
-## Personalización
-- Productos y precios de muestra: `js/products.js`
-- Textos y comportamiento: `js/main.js`
-- Estilos: `css/style.css`
-- Estructura: `index.html`
+## Publish with GitHub Pages
 
-Las imágenes de la composición son formas CSS generadas para la demo, no fotografías de productos reales.
+The workflow in `.github/workflows/publish.yml` deploys only the storefront pages, styles, scripts, screenshot assets and photo credits. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. A push to `main` then publishes the store at the site root.
+
+The full editable template folders and downloadable ZIPs stay outside the published site. The local source folder `Nueva carpeta/` and ZIP files in `delivery-packages/` are excluded by `.gitignore`. Do not force-add them to the repository or deploy them.
+
+The storefront's own HTML, CSS and JavaScript are public in this repository and can also be viewed in a browser. The paid template source is not included in the public site.
+
+## Set up automatic sales
+
+The **Buy now** actions open the hosted checkout URLs in `store/js/payment-links.js`. Each product must have the matching ZIP in the payment provider's private digital-delivery area, with automatic email delivery enabled. The store does not collect card details or send product files itself. **Ask a question** remains available using the support address in the same file.
+
+## Photo credits
+
+Photo sources and licences for images visible in the supplied screenshots are listed in `store/image-credits.md`.
+
+See `LAUNCH-GUIDE.md` before announcing the store or taking orders.
